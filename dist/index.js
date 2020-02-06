@@ -84,12 +84,16 @@ var CashId = function (_React$Component) {
   }, {
     key: 'badgerSign',
     value: function badgerSign(cashIDRequest) {
+      var callback = this.props.callback;
+
       var web4bch = this.state.web4bch;
       if ((typeof web4bch === 'undefined' ? 'undefined' : _typeof(web4bch)) === undefined) {
         window.open('https://badger.bitcoin.com/', '_blank').focus();
       } else {
         web4bch.bch.sign(web4bch.bch.defaultAccount, cashIDRequest, function (err, res) {
-          //console.log('res', res);
+          if (callback !== undefined) {
+            callback();
+          }
 
           if (err) return;
         });
