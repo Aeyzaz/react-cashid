@@ -92,7 +92,7 @@ var CashId = function (_React$Component) {
       } else {
         web4bch.bch.sign(web4bch.bch.defaultAccount, cashIDRequest, function (err, res) {
           if (callback !== undefined) {
-            callback();
+            callback(res);
           }
 
           if (err) return;
