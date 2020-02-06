@@ -46,7 +46,9 @@ class CashId extends React.Component {
         res
       ) {
         if (callback !== undefined) {
-          callback(res);
+          console.log('err',err);
+          console.log('res',res);
+          callback(err,res);
         }
 
         if (err) return;
