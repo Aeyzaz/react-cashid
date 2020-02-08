@@ -1,3 +1,5 @@
+#This Fork is not meant to be used by General Public.
+
 # CashID React component
 
 ## React component to generate QR code and badgerwallet button using CashID
